@@ -20,9 +20,9 @@ export REDIS_CHANNEL_NAME="channel:1"
 ```
 4. Run webhooks service:
 ```
-python run.py
+python3.9 run.py
 ```
 5. Now, you can connect to Redis and send message to the channel. For example:
 ```
-python send_example_message.py
+python3.9 send_example_message.py
 ```
