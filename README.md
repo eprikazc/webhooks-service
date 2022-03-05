@@ -1,3 +1,5 @@
+This is a basic webhooks service written with python asyncio which polls redis channel for webhook events to be sent and sends them. Failed requests are scheduled for retry according to (hardcoded) retry policy.
+
 1. Prepare Postgres database with following table:
 ```
 CREATE TABLE webhook_attempt (
@@ -12,7 +14,7 @@ CREATE TABLE webhook_attempt (
 );
 ```
 2. Run Redis server
-3. Set environment variable with Postgres and Redis connection strings:
+3. Set environment variables with Postgres and Redis connection strings:
 ```
 export DATABASE_URL="postgres://postgres@127.0.0.1/my_db"
 export REDIS_URL="redis://127.0.0.1"
