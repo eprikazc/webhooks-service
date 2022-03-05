@@ -10,9 +10,6 @@ import aioredis
 import backoff
 
 db_conn_string = os.environ["DATABASE_URL"]
-"""
-Point to a database with following table:
-"""
 redis_conn_string = os.environ["REDIS_URL"]
 redis_channel_name = os.environ["REDIS_CHANNEL_NAME"]
 
